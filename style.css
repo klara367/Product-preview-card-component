@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***** Layout-structure *****/
+
+body {
+    width: 1440px;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 600px;
+    height: 450px;
+    background-color: white;
+    display: flex;
+    border-radius: 10px;
+}
+
+img, .text-part {
+    flex: 1;
+}
+
+.product-image-desktop {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.product-image-mobile {
+    display: none;
+}
+.text-part {
+    margin: 30px;
+}
+
+
+/****** Text-styling ******/
+
+p {
+    font-family: "Montserrat", sans-serif;
+    line-height: 25px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+}
+
+p.perfume {
+    letter-spacing: 3px;
+    line-height: 5px;
+    margin-top: 5px;
+}
+
+h1.very-dark-blue {
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+p.product-description {
+    margin-top: 25px;
+}
+
+.prices {
+    display: flex;
+}
+
+p.new-price {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    margin-right: 20px;
+}
+
+/******* Button-styling *******/
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.btn {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-decoration: none;
+    background-color: hsl(158, 36%, 37%);
+    padding: 15px 61px;
+    border-radius: 8px;
+    font-family: 500;
+}
+
+.btn-div a::before {
+    content: url(./images/icon-cart.svg);
+    margin-right: 10px;
+    top: 2px;
+    position: relative;
+}
+
+a.btn:hover, a.btn:active {
+    background-color: hsl(158, 36%, 15%);
+}
+
+/******* Mobile-design *******/
+
+@media only screen and (max-width: 375px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .product-image-mobile {
+        display: block;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+    }
+
+    .product-image-desktop {
+        display: none;
+
+    }
+
+    .card {
+        height: auto;
+        width: 375px;
+    }
+
+    a.btn {
+    padding: 15px 98px;
+    }
+}
