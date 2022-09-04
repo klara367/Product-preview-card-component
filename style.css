@@ -7,9 +7,9 @@
 /***** Layout-structure *****/
 
 body {
-    width: 1440px;
+    width: 100vw;
     background-color: hsl(30, 38%, 92%);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
